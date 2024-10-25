@@ -3,8 +3,6 @@ const App = ()=>{
     <div>
       <h1>
         hello
-        hai
-        bye
       </h1>
     </div>
   )
