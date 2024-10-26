@@ -10,33 +10,35 @@ const Login = ()=>{
     const [state,setstate] = useState({
         username : "",
         password : "",
-        isLogin : true
+        isLoginForErrorMesssage : true,
+        errorMessage : ""
     })
+    const [showPassword , setshowPassword] = useState(false);
 
-
-
-    const login = async (event)=>{
-        const token = Cookies.get("jwt_token_nxt_watch_login");
+    const token = Cookies.get("jwt_token_nxt_watch_login");
         if(token !== undefined){
             return <Navigate to ="/home"/>
         }
+
+
+
+    const loginfun = async (event)=>{
         event.preventDefault();
+        
         const userdetails = {
             username : state.username,
             password : state.password
         }
         const obj = {
             method : "POST",
-            headers:{
-                'Content-Type' : "application/json"
-            },
             body: JSON.stringify(userdetails)
             
         }
         try{
-            const response = fetch("https://apis.ccbp.in/login",obj)
+            const response = await fetch("https://apis.ccbp.in/login",obj)
             if(response.ok){
                 const result = await response.json()
+                console.log(result)
                 Cookies.set("jwt_token_nxt_watch_login" ,result.jwt_token,{expires:30} )
                 navigate("/home")  
             }
@@ -44,22 +46,27 @@ const Login = ()=>{
                 setstate((prevstate)=>{
                     return{
                         ...prevstate,
-                        isLogin : false
+                        isLogin : false,
+                        errorMessage : "Invalid username and password "
                     }
                 })
             }
-
         }catch(error){
-
+            setstate((prevstate)=>{
+                return{
+                    ...prevstate,
+                    isLogin : false,
+                    errorMessage : "Something went wrong "
+                }
+            })
         }
-
-        
-        
-
-
-
-
     }
+
+    const togglePassword = () => {
+        setshowPassword((prevstate) =>{
+            return !prevstate
+        }); 
+    };
 
     const usernameinput = (event)=>{
         setstate((prevsatte)=>{
@@ -93,17 +100,17 @@ const Login = ()=>{
                     <label  className ="label-element">
                         PASSWORD
                     </label>
-                    <input type="password"  className="input-element" onChange={passwordinput}/> 
+                    <input type={showPassword ? "text" : "password"} className="input-element" onChange={passwordinput}/> 
                     <br/>
                     <div className ="check-box-container">
-                        <input type="checkbox" className = "check-box-input"/>
-                        <label>
+                        <input type="checkbox" className = "check-box-input" onChange={togglePassword} checked={showPassword} id="showPasswordCheckbox"/>
+                        <label htmlFor="showPasswordCheckbox" >
                             Show Password
                         </label>
-                        {state.isLogin ? null : <p>Login Failed</p>  }
                     </div>
+                    {state.isLoginForErrorMesssage && <p>{state.errorMessage}</p> }
                 </form>
-                <button className = "login-button" onClick={login}>Login</button>
+                <button className = "login-button" onClick={loginfun}>Login</button>
             </div>
         </div>
     )
