@@ -1,0 +1,17 @@
+.home-background{
+    
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    
+}
+
+
+
+.home-right{
+    border-style: solid;
+    border-color: aquamarine;
+    height: 100vh;
+    width: 75%;
+    /* flex-grow: 1; */
+}

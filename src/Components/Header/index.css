@@ -1,0 +1,37 @@
+.header-back {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    justify-content: space-between;
+}
+
+.header-buttons{
+    width: 160px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-nxt-logo{
+    height: 40px;
+}
+
+.header-profile{
+    height: 30px;
+}
+
+.header-moon{
+    height: 30px;
+}
+
+.header-logout{
+    background-color:transparent;
+    color: #3b82f6;
+    border-color: #3b82f6;
+    width: 80px;
+    border-width: 1px;
+    height: 26px;
+    border-radius: 3px;
+}
+

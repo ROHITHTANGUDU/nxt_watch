@@ -1,14 +1,17 @@
 import {BrowserRouter,Route,Routes} from "react-router-dom";
 import Login from "./Components/Login"
 import Home from "./Components/Home"
+import ProtectedRoute from "./Components/ProtectedRoute";
 
 
 const App = ()=>{
   return(
     <BrowserRouter>
       <Routes>
-        <Route excat path = "/login" element={<Login/>}/>
-        <Route excat path = "/home" element={<Home/>}/>
+        <Route excat path = "/" element={<Login/>}/>
+        <Route element = {<ProtectedRoute/>}>
+          <Route excat path = "/home" element={<Home/>}/>
+        </Route>
       </Routes>
     </BrowserRouter>
     

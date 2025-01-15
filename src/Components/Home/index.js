@@ -1,10 +1,21 @@
+import "./index.css"
+import Header from "../Header"
+import Sidebar from "../Sidebar"
 const Home = ()=>{
     return(
-        <div>
-            <h1>
-                Home page
-            </h1>
-        </div>
+        <>
+            <Header/>
+            <div className = "home-background">
+                <Sidebar/>
+                <div className = "home-right">
+                    <h1>
+                        Home page
+                    </h1>
+                </div>
+                
+            </div>
+        </>
+        
     )
 }
 

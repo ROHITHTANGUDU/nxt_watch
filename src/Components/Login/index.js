@@ -46,7 +46,6 @@ const Login = ()=>{
                 setstate((prevstate)=>{
                     return{
                         ...prevstate,
-                        isLogin : false,
                         errorMessage : "Invalid username and password "
                     }
                 })
@@ -55,7 +54,6 @@ const Login = ()=>{
             setstate((prevstate)=>{
                 return{
                     ...prevstate,
-                    isLogin : false,
                     errorMessage : "Something went wrong "
                 }
             })
