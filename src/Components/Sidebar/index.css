@@ -1,16 +1,18 @@
 .side-bar{
     width: 20%;
-    height: 100vh;
+    height: 100%;
     position: relative; 
     transition: 0.5s; 
     display: flex;
     flex-direction: column;
+    border-style: solid;
 }
 
 
 .side-bar.collapsed{
     position: relative;
     width: 5%;
+
 }
 
 .side-bar-nxt-logo{
@@ -27,6 +29,8 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    
+
     
 }
 .side-bar-footer-header{

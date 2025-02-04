@@ -1,0 +1,11 @@
+.pagenation__number{
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+
+}
+
+.pagenation__back{
+    display: flex;
+    justify-content: center;
+}

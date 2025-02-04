@@ -1,0 +1,30 @@
+.video-card{
+    border-style: solid;
+    height: 320px;
+    width: 250px;
+    margin: 4px;
+    
+}
+
+.videocard__thumbnail{
+    height: 45%;
+    width: 100%;
+}
+
+.videocard__bottom{
+    display: flex;
+
+}
+
+.videocard__profile{
+    height: 50px;
+    margin-right: 4px;
+
+}
+.videocard__content{
+    margin-top: -14px;
+   
+    
+
+    height: 65%;
+}
