@@ -1,0 +1,55 @@
+.videodetails__background{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+}
+
+.videodetails__right{
+    width: 75%;
+    border-style: solid;
+    padding: 8px;
+
+}
+
+.videoplayer__background{
+    width: 100%;
+    height: 100vh;
+   
+}
+.videoplayer__box{
+    width: 100%;
+}
+
+.video__options{
+    display:flex;
+   
+    justify-content: space-between;
+  
+
+}
+.videoviews__age{
+    display: flex;
+   
+    width: 200px;
+    justify-content: space-between;
+}
+
+.videolikes__save{
+    
+    display: flex;
+    align-items: center;
+    width: 220px;
+    justify-content: space-between;
+}
+
+
+.videoDescription__buttons{
+    background-color: transparent;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    border-style: none;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 1px
+}
