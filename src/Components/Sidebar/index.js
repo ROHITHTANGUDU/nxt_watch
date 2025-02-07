@@ -6,9 +6,11 @@ import { useState } from "react"
 import { faHouse } from "@fortawesome/free-solid-svg-icons"
 import { Link } from "react-router-dom"
 
-const Sidebar = ()=>{
+const Sidebar = (props)=>{
+
     const [menu,setmenu ] = useState(true)
     const handlemenu = ()=>{
+
         setmenu((prevstate)=>{
             return !prevstate
         })

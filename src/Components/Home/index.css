@@ -6,7 +6,10 @@
     
 }
 
-
+.homesidebar__notexpanded{
+    width: 95%;
+    
+}
 
 .home-right{
     border-style: solid;
@@ -34,5 +37,6 @@
     background-position: left; /* Centers the image */
     width: 100%;  /* Set width */
     height: 250px; /* Set height */
+    background-size: cover;
 
 }

@@ -11,6 +11,7 @@ const Home = ()=>{
     const [totalpages , setTotalpages] = useState(0)
     const [searchtempval , setSearchtempvalue] = useState("")
     const [searchval , setSearchvalue] = useState("")
+   
     const postsperpage = 4
     useEffect(()=>{
         fetchproducts()
@@ -63,7 +64,7 @@ const Home = ()=>{
         <>
             <Header/>
             <div className = "home-background">
-                <Sidebar/>
+                <Sidebar />
                 <div className = "home-right">
                     <div className="home-banner">
                     </div>

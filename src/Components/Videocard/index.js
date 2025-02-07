@@ -4,7 +4,7 @@ const VideoCard = (props)=>{
     const {video :{title,channel :{profile_image_url,name},published_at,id,thumbnail_url,view_count}} = props
     console.log(props)
     return(
-        <Link to= {`/vidoes/${id}`}>
+        <Link to= {`/vidoes/${id}`}  className = "videocard__link">
             <li className = "video-card">
                 <img src = {thumbnail_url} alt ="thumbnail" className = "videocard__thumbnail"/>
                 <div className="videocard__bottom">
