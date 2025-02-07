@@ -1,4 +1,4 @@
-import "./index.css";
+
 import { useParams } from "react-router-dom"
 
 

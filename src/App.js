@@ -12,7 +12,7 @@ const App = ()=>{
         <Route excat path = "/" element={<Login/>}/>
         <Route element = {<ProtectedRoute/>}>
           <Route excat path = "/home" element={<Home/>}/>
-          <Route excat path = ":/vidoes/{id}" element={<Videodetails/>}/>
+          <Route excat path = "/vidoes/:id" element={<Videodetails/>}/>
         </Route>
       </Routes>
     </BrowserRouter>
