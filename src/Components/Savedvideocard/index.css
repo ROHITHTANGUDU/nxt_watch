@@ -1,0 +1,10 @@
+.savedvideo__card{
+    border-style: solid;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+}
+
+.savedvideo__image{
+    width: 30%;
+}
