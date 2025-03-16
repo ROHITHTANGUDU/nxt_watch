@@ -47,6 +47,16 @@
   },
   "devDependencies": {
     "eslint": "^8.57.1",
+    "gh-pages": "^6.3.0",
     "prettier": "^3.3.3"
-  }
+  },
+  "scripts": {
+  "start": "react-scripts start",
+  "build": "react-scripts build",
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d build"
+},
+"homepage": "https://rohithtangudu.github.io/nxt_watch/"
+
+
 }
