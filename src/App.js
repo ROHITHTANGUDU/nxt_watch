@@ -1,4 +1,4 @@
-import {BrowserRouter,Route,Routes} from "react-router-dom";
+import {HashRouter,Route,Routes} from "react-router-dom";
 import Login from "./Components/Login"
 import Home from "./Components/Home"
 import Videodetails from "./Components/Videodetails";
@@ -10,7 +10,7 @@ import Savedvideos from "./Components/Savedvideos";
 const App = ()=>{
   return(
     <SavedVidoesProvider>
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route exact path = "/" element={<Login/>}/>
         <Route element = {<ProtectedRoute/>}>
@@ -19,7 +19,7 @@ const App = ()=>{
           <Route exact path = "/vidoes/:id" element={<Videodetails/>}/>
         </Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
     </SavedVidoesProvider>
     
   )
